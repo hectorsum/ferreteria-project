@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">DatabaseApp</string>
-    <string name="hint_name">Name: </string>
-    <string name="hint_stock">Stock: </string>
-    <string name="hint_price">Price: </string>
+    <string name="app_name">Ferreteria Product Management</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_stock">Stock</string>
+    <string name="hint_price">Price</string>
     <string name="btnSave">Save</string>
+    <string name="menu_new">Products</string>
 </resources>

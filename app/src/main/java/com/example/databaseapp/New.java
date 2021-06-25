@@ -19,21 +19,23 @@ public class New extends AppCompatActivity {
         txtNombre = findViewById(R.id.txtName);
         txtStock = findViewById(R.id.txtStock);
         txtPrice = findViewById(R.id.txtPrice);
-        //Detect when the user clicks
+	btnSave = findViewById(R.id.btnSave);
+        //Detect when the user clicks on "Save" button
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 DbProduct dbProduct = new DbProduct(New.this);
                 long id = dbProduct.insertProduct(txtNombre.getText().toString(), Integer.parseInt(txtStock.getText().toString()), Double.parseDouble(txtPrice.getText().toString()));
                 if(id > 0){
-                    Toast.makeText(New.this, "PRODUCT INSERTED", Toast.LENGTH_LONG).show();
+                    Toast.makeText(New.this, "PRODUCT INSERTED "+id, Toast.LENGTH_LONG).show();
+                    clearFields();
                 }else{
                     Toast.makeText(New.this, "ERROR WHEN INSERTING PRODUCTS", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
-    private void Clear(){
+    private void clearFields(){
         txtNombre.setText("");
         txtPrice.setText("");
         txtStock.setText("");

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class dbHelper extends SQLiteOpenHelper {
 
     //Everytime I do any changes, I upgrade the version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "ferreteria.db";
     public static final String TABLE_PRODUCTS = "products";
 
@@ -20,8 +20,8 @@ public class dbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+TABLE_PRODUCTS+"(" +
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE "+TABLE_PRODUCTS+"(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name TEXT NOT NULL," +
                 "price DOUBLE NOT NULL," +
@@ -30,9 +30,9 @@ public class dbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //Evertime there's an upgrade, we delete the table and then create it
-        db.execSQL("DROP TABLE "+TABLE_PRODUCTS);
-        onCreate(db);
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        //Everytime there's an upgrade, we delete the table and then create it
+        sqLiteDatabase.execSQL("DROP TABLE "+TABLE_PRODUCTS);
+        onCreate(sqLiteDatabase);
     }
 }
