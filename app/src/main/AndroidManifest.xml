@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-	    android:theme="@style/Theme.DatabaseApp" >
+	    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" >
 	    <!--To get an arrow back button that redirects to MainActivity screen-->
     	<activity android:name=".New" android:parentActivityName=".MainActivity">
 	    <meta-data android:name="android.support.PARENT_ACTIVITY"

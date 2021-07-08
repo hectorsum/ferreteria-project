@@ -21,7 +21,6 @@
         android:id="@+id/txtStock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:ellipsize="end"
         android:ems="10"
         android:hint="@string/hint_stock"
@@ -32,7 +31,6 @@
         android:id="@+id/txtPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:ems="10"
         android:hint="@string/hint_price"
         android:inputType="textPersonName"
@@ -42,6 +40,5 @@
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-
         android:text="@string/btnSave" />
 </LinearLayout >

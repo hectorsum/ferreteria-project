@@ -29,13 +29,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listProducts = findViewById(R.id.listProducts);
         listProducts.setLayoutManager(new LinearLayoutManager(this));
         DbProduct dbProduct = new DbProduct(MainActivity.this);
         listArrayProducts = new ArrayList<>();
         //Sending response from our database query to be processed in Adapter
         System.out.println("products: "+dbProduct.listProducts());
-        ListProductsAdapter adapter = new ListProductsAdapter(dbProduct.listProducts());
+        ListProductsAdapter adapter = new ListProductsAdapter(dbProduct.listProducts(),null);
         listProducts.setAdapter(adapter);
     }
     public boolean onCreateOptionsMenu(Menu menu){
