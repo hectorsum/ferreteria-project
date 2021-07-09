@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginLeft="@dimen/loginViewsMargin"
+    android:layout_marginRight="@dimen/loginViewsMargin"
     tools:context=".New">
 
     <EditText
         android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:ems="10"
         android:hint="@string/hint_name"
         android:inputType="textPersonName"
@@ -40,5 +41,6 @@
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="@string/btnSave" />
+        android:text="@string/btnSave"
+        android:background="@color/success"/>
 </LinearLayout >

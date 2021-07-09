@@ -5,4 +5,9 @@
     <string name="hint_price">Price</string>
     <string name="btnSave">Save</string>
     <string name="menu_new">Products</string>
+    <string name="menu_logout">Log out</string>
+    <!--User-->
+    <string name="hint_email">Email</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
 </resources>

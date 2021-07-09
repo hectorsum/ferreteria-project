@@ -1,7 +1,10 @@
 package com.example.databaseapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +23,7 @@ public class New extends AppCompatActivity {
         txtStock = findViewById(R.id.txtStock);
         txtPrice = findViewById(R.id.txtPrice);
 	    btnSave = findViewById(R.id.btnSave);
+
         //Detect when the user clicks on "Save" button
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
